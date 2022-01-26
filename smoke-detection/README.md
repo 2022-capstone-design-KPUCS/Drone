@@ -66,3 +66,16 @@ epochs는 1000으로 그리고 batch_size는 32로 하는 것이 최적의 상�
 %tensorboard --logdir /content/yolov5/runs
 ```
 ![](./tenserboard.JPG)
+
+
+# 적용
+```
+// best.pt -> smokeDetection파일로 만들어진 가중치
+
+// video.mp4에서 smoke detect
+python detect.py --weights <best.pt> --source <video.mp4>
+
+// webcam
+python detect.py --weights <best.pt> --source 0 
+
+```
