@@ -1,16 +1,10 @@
-# Crosswalks and Traffic Lights Detection
-
-Crosswalks and traffic lights detection for people with visual impairment and blindness.
-
-![](data/result.gif)
+# Fire Detection Using Drone
+- drone을 사용하여 화재를 감시합니다.
 
 ## Run
-
 ```
 python test.py
 ```
-
-Output video would be stored at `data` directory.
 
 ## Pretrained Models
 
@@ -24,27 +18,15 @@ Used hyperparameters for training: [runs/train/exp4/hyp.yaml](runs/train/exp4/hy
 Used script for training
 
 ```
-python train.py --img 640 --batch 16 --epochs 50 --data crosswalk.yaml --weights yolov5s6.pt
+python train.py --img 416 --batch 32 --epochs 50 --data crosswalk.yaml --weights yolov5s6.pt
 ```
 
 ## Training Summary
 
-Model Summary: 280 layers, 12315904 parameters, 0 gradients, 16.2 GFLOPs
 
-|Class|Images|Labels|Precision|Recall|mAP@.5|mAP@.5:.95|
-|---|---|---|---|---|---|---|
-|all|6593|9120|0.905|0.943|0.956|0.76|
-|Zebra_Cross|6593|6631|0.981|0.968|0.988|0.929|
-|R_Signal|6593|1843|0.86|0.934|0.941|0.675|
-|G_Signal|6593|646|0.875|0.926|0.94|0.674|
 
 ## Dataset
 
-[교차로 및 화폐 정보 데이터셋, Intersection and currency information datasets](https://open.selectstar.ai/data-set/wesee)
-
-## Preprocessing Dataset
-
-[`preprocess.ipynb`](preprocess.ipynb)
 
 ## Special Thanks to [Ultralytics](https://github.com/ultralytics) and [SelectStar](https://selectstar.ai/).
 
