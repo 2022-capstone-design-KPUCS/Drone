@@ -1,6 +1,13 @@
 # Fire Detection Using Drone
 - drone을 사용하여 화재를 감시합니다.
 
+## Need
+- 필요한 파일
+    + models/
+    + runs/
+    + utils/
+    + test.py
+
 ## Run
 ```
 python test.py
